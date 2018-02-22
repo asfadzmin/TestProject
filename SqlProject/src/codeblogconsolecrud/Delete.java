@@ -25,7 +25,7 @@ public class Delete {
         if ("Y".equals(confirm_delete)) {
             DBUtilities dbUtilities = new DBUtilities();
 
-            String sql_stmt = "DELETE FROM contacts WHERE id = " + student_id;
+            String sql_stmt = "DELETE FROM studentsdetail WHERE id = " + student_id;
 
             dbUtilities.ExecuteSQLStatement(sql_stmt);
             
@@ -39,7 +39,7 @@ public class Delete {
         try {
             DBUtilities dbUtilities = new DBUtilities();
 
-            String sql_stmt = "SELECT id, name, className, mark FROM contacts WHERE id = " + student_id;
+            String sql_stmt = "SELECT id, name, className, mark FROM studentsdetail WHERE id = " + student_id;
             ResultSet resultSet = dbUtilities.ReadRecords(sql_stmt);
 
             // process query results
@@ -47,7 +47,7 @@ public class Delete {
 
                 ResultSetMetaData metaData = resultSet.getMetaData();
                 int numberOfColumns = metaData.getColumnCount();
-                System.out.print("Database Records Listingn");
+                System.out.print("Database Records Listing");
 
                 for (int i = 1; i <= numberOfColumns; i++) {
                     System.out.printf("%-8s", metaData.getColumnName(i));
