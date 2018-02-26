@@ -29,7 +29,7 @@ public class Delete {
 
             dbUtilities.ExecuteSQLStatement(sql_stmt);
             
-            System.out.println("The Record has successfully being deleted");
+            System.out.println("The Record chosen has successfully being deleted");
         }
 
         CodeBlogConsoleCRUD.DisplayMenu();
