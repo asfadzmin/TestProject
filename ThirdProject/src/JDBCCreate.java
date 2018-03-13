@@ -1,6 +1,6 @@
 //STEP 1. Import required packages
 
-GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'localhost' IDENTIFIED BY 'gopi';
+//GRANT ALL PRIVILEGES ON *.* TO 'myuser'@'localhost' IDENTIFIED BY 'gopi';
 import java.sql.*;
 import java.util.Properties.*;
 
@@ -10,15 +10,15 @@ public class JDBCCreate {
    static final String DB_URL = "jdbc:mysql://localhost:3306/";
 
    //  Database credentials
-   static final String USER = "myuser";
-   static final String PASS = "gopi";
-
+   static final String USER = "asfa";
+   static final String PASS = "NewPass";
+/*
    Properties properties = new Properties();
-   properties.setProperty("user", "myuser");
-   properties.setProperty("password", "gopi");
+   properties.setProperty("user", "asfa");
+   properties.setProperty("password", "NewPass");
    properties.setProperty("useSSL", "false");
    // properties.setProperty("autoReconnect", "true");
-   
+   */
    public static void main(String[] args) {
    Connection conn = null;
    Statement stmt = null;
